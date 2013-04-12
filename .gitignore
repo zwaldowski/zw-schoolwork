@@ -1,0 +1,19 @@
+# Compiled destination folder
+bin/
+
+# Compiled Java
+*.class
+
+# Java packages
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.settings
+.metadata
+.idea
+
+# Manual overrides
+CS\ 1332/*/.classpath
+CS\ 1332/*/.project

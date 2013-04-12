@@ -4,6 +4,8 @@
 
 This repo encompasses homework and coursework completed as part of my undergraduate education. It serves as a source of reference, demonstration (or development, hopefully) of skill, and one more thing whose backing up I don't have to worry about.
 
+Do note that some assignments may have incomplete or incorrect implementations. YMMV.
+
 **Please don't cheat. It's not cool.**
 
 When not otherwise indicated, code is licensed under the [MIT license](http://opensource.org/licenses/MIT).
