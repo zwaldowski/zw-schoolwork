@@ -4,6 +4,9 @@ bin/
 # Compiled Java
 *.class
 
+# C objects
+*.o
+
 # Java packages
 *.jar
 *.war
