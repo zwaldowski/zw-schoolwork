@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB2D14051715D631006AE0F9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DB2D14041715D631006AE0F9 /* main.c */; };
+		DB2D140E1715D6C1006AE0F9 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = DB2D140D1715D6C1006AE0F9 /* matrix.c */; };
+		DB2D1415171620A7006AE0F9 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = DB2D1414171620A7006AE0F9 /* util.c */; };
+		DB2D14191716A2A3006AE0F9 /* jacobi.c in Sources */ = {isa = PBXBuildFile; fileRef = DB2D14181716A2A3006AE0F9 /* jacobi.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB2D13FF1715D631006AE0F9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB2D14011715D631006AE0F9 /* JacobiAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JacobiAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2D14041715D631006AE0F9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DB2D140D1715D6C1006AE0F9 /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		DB2D140F1715D6C8006AE0F9 /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		DB2D1414171620A7006AE0F9 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		DB2D1416171620AD006AE0F9 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		DB2D14171716A294006AE0F9 /* jacobi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jacobi.h; sourceTree = "<group>"; };
+		DB2D14181716A2A3006AE0F9 /* jacobi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jacobi.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB2D13FE1715D631006AE0F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB2D13F81715D630006AE0F9 = {
+			isa = PBXGroup;
+			children = (
+				DB2D14031715D631006AE0F9 /* JacobiAlgorithm */,
+				DB2D14021715D631006AE0F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB2D14021715D631006AE0F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D14011715D631006AE0F9 /* JacobiAlgorithm */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB2D14031715D631006AE0F9 /* JacobiAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D14041715D631006AE0F9 /* main.c */,
+				DB2D1416171620AD006AE0F9 /* util.h */,
+				DB2D1414171620A7006AE0F9 /* util.c */,
+				DB2D140F1715D6C8006AE0F9 /* matrix.h */,
+				DB2D140D1715D6C1006AE0F9 /* matrix.c */,
+				DB2D14171716A294006AE0F9 /* jacobi.h */,
+				DB2D14181716A2A3006AE0F9 /* jacobi.c */,
+			);
+			path = JacobiAlgorithm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB2D14001715D631006AE0F9 /* JacobiAlgorithm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB2D140A1715D631006AE0F9 /* Build configuration list for PBXNativeTarget "JacobiAlgorithm" */;
+			buildPhases = (
+				DB2D13FD1715D631006AE0F9 /* Sources */,
+				DB2D13FE1715D631006AE0F9 /* Frameworks */,
+				DB2D13FF1715D631006AE0F9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JacobiAlgorithm;
+			productName = JacobiAlgorithm;
+			productReference = DB2D14011715D631006AE0F9 /* JacobiAlgorithm */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB2D13F91715D630006AE0F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Zach Waldowski";
+			};
+			buildConfigurationList = DB2D13FC1715D630006AE0F9 /* Build configuration list for PBXProject "JacobiAlgorithm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB2D13F81715D630006AE0F9;
+			productRefGroup = DB2D14021715D631006AE0F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB2D14001715D631006AE0F9 /* JacobiAlgorithm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB2D13FD1715D631006AE0F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2D14051715D631006AE0F9 /* main.c in Sources */,
+				DB2D140E1715D6C1006AE0F9 /* matrix.c in Sources */,
+				DB2D1415171620A7006AE0F9 /* util.c in Sources */,
+				DB2D14191716A2A3006AE0F9 /* jacobi.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB2D14081715D631006AE0F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB2D14091715D631006AE0F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB2D140B1715D631006AE0F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+			};
+			name = Debug;
+		};
+		DB2D140C1715D631006AE0F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB2D13FC1715D630006AE0F9 /* Build configuration list for PBXProject "JacobiAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB2D14081715D631006AE0F9 /* Debug */,
+				DB2D14091715D631006AE0F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB2D140A1715D631006AE0F9 /* Build configuration list for PBXNativeTarget "JacobiAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB2D140B1715D631006AE0F9 /* Debug */,
+				DB2D140C1715D631006AE0F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB2D13F91715D630006AE0F9 /* Project object */;
+}

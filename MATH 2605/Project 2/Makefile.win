@@ -1,0 +1,4 @@
+all:
+	gcc -static -std=c99 -Os -Wall -IJacobiAlgorithm -o bin/JacobiAlgorithm-i386.exe \
+	JacobiAlgorithm/main.c JacobiAlgorithm/matrix.c JacobiAlgorithm/jacobi.c JacobiAlgorithm/util.c \
+	-lm

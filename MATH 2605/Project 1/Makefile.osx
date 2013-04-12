@@ -1,0 +1,2 @@
+all:
+	clang -std=c99 -Os -Wall -IPinballProject -o PinballProject-osx PinballProject/geom.c PinballProject/main.c -lm -mmacosx-version-min=10.6 -arch i386 -arch x86_64

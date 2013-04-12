@@ -1,0 +1,4 @@
+all:
+	clang -std=c99 -Os -Wall -IJacobiAlgorithm -o bin/JacobiAlgorithm-osx \
+	JacobiAlgorithm/main.c JacobiAlgorithm/matrix.c JacobiAlgorithm/jacobi.c JacobiAlgorithm/util.c \
+	-lm -mmacosx-version-min=10.6 -arch i386 -arch x86_64

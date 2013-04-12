@@ -1,0 +1,4 @@
+ARCH = $(shell uname -m)
+
+all:
+	gcc -static -std=c99 -Os -Wall -IPinballProject -o PinballProject-$(ARCH)-lnx PinballProject/geom.c PinballProject/main.c -lm

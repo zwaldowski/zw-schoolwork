@@ -12,7 +12,16 @@ bin/
 # Eclipse
 .settings
 .metadata
-.idea
+
+# IntelliJ+AppCode
+.idea/
+
+# Mac/Xcode
+.DS_Store
+*/build/*
+xcuserdata
+*.moved-aside
+DerivedData
 
 # Manual overrides
 CS\ 1332/*/.classpath

@@ -1,0 +1,2 @@
+all:
+	gcc -static -std=c99 -Os -Wall -IPinballProject -o PinballProject-i386.exe PinballProject\geom.c PinballProject\main.c -lm
