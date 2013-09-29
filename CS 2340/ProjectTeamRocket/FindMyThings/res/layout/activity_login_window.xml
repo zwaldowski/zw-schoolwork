@@ -1,0 +1,105 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/HeaderLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/form_activity_input_pad_vertical"
+                android:paddingRight="@dimen/form_activity_input_pad_horizontal"
+                android:paddingTop="@dimen/form_activity_input_pad_vertical"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/HeaderLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/form_activity_input_pad_vertical"
+                android:paddingRight="@dimen/form_activity_input_pad_horizontal"
+                android:paddingTop="@dimen/form_activity_input_pad_vertical"
+                android:singleLine="true" />
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+    
+               <Button
+                   android:id="@+id/register_button"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:layout_gravity="left"
+                   android:text="@string/action_register_short"
+                   style="@android:style/Widget.Holo.Button.Borderless"
+                   android:background="@color/HoloLightBlue"
+                   android:layout_marginRight="8dp"
+                   android:onClick="goToRegister" />
+    
+               <Button
+                   android:id="@+id/sign_in_button"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:layout_gravity="right"
+                   android:text="@string/action_sign_in_short"
+                   style="@android:style/Widget.Holo.Button.Borderless"
+                   android:background="@color/HoloLightBlue"
+                   android:layout_marginLeft="8dp"
+                   android:onClick="attemptToLogin" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

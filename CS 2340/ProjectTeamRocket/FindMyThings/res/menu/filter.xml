@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+     android:id="@+id/filter_ok" 
+     android:title="STOP LOOKING AT THIS TEXT"
+     android:icon="@drawable/action_accept"
+     android:showAsAction="ifRoom" />
+ <item
+     android:id="@+id/filter_cancel"
+     android:icon="@drawable/action_cancel"
+     android:title="Seriously, go away."
+     android:showAsAction="ifRoom" />
+
+</menu>

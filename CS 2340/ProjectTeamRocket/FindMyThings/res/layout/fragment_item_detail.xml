@@ -1,0 +1,140 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	
+	android:orientation="vertical"
+	tools:context=".ItemDetailFragment">
+	   			
+			    
+			<edu.gatech.oad.rocket.findmythings.util.AllCapsTextView
+	        	android:id="@+id/describecap"
+	        	android:text="@string/description"
+	        	style="@style/HeaderGrey"
+	        	/>
+	
+			<TextView
+			    android:id="@+id/loc_detail"
+			    android:layout_width="280dp"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/locationcap"
+			    android:ems="10"
+			    android:paddingBottom="5dp"
+			    android:paddingLeft="12dp"
+			    android:paddingRight="12dp"
+			    android:paddingTop="5dp"
+			    android:textIsSelectable="true"
+			    android:textSize="15sp" android:layout_alignParentStart="true">
+	        	
+			</TextView>
+			
+			<edu.gatech.oad.rocket.findmythings.util.AllCapsTextView
+			    android:layout_below="@+id/reward_detail"
+			    android:id="@+id/cat_cap"
+			    style="@style/HeaderGrey"
+			    android:paddingBottom="15dp"
+			    android:paddingTop="15dp"
+			    android:text="@string/category_type" />
+
+			<TextView
+			    android:layout_below="@+id/cat_cap"
+			    android:id="@+id/cat_detail"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:paddingBottom="5dp"
+			    android:paddingLeft="12dp"
+			    android:paddingRight="12dp"
+			    android:paddingTop="5dp"
+			    android:textIsSelectable="true"
+			    android:textSize="15sp" >
+	        	
+			</TextView>
+			
+			<edu.gatech.oad.rocket.findmythings.util.AllCapsTextView
+			    android:layout_below="@+id/cat_detail"
+			    android:id="@+id/date"
+			    style="@style/HeaderGrey"
+			    android:paddingBottom="15dp"
+			    android:paddingTop="15dp"
+			    android:text="@string/date_submitted" />
+
+				<TextView
+				    android:layout_below="@+id/date"
+				    android:id="@+id/date_detail"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:ems="10"
+				    android:paddingBottom="5dp"
+				    android:paddingLeft="12dp"
+				    android:paddingRight="12dp"
+				    android:paddingTop="5dp"
+				    android:textIsSelectable="true"
+				    android:textSize="15sp" />
+
+				<TextView
+				    android:id="@+id/reward_detail"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_below="@+id/reward"
+				    android:ems="10"
+				    android:paddingBottom="5dp"
+				    android:paddingLeft="12dp"
+				    android:paddingRight="12dp"
+				    android:paddingTop="5dp"
+				    android:textIsSelectable="true"
+				    android:textSize="15sp" />
+
+				<TextView
+				    android:id="@+id/item_detail"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_below="@+id/describecap"
+				    android:ems="10"
+				    android:paddingBottom="5dp"
+				    android:paddingLeft="12dp"
+				    android:paddingRight="12dp"
+				    android:paddingTop="5dp"
+				    android:textIsSelectable="true"
+				    android:textSize="15sp" />
+
+				<edu.gatech.oad.rocket.findmythings.util.AllCapsTextView
+				    android:id="@+id/locationcap"
+				    style="@style/HeaderGrey"
+				    android:layout_alignParentLeft="true"
+				    android:layout_below="@+id/item_detail"
+				    android:text="@string/location" />
+
+				<edu.gatech.oad.rocket.findmythings.util.AllCapsTextView
+				    android:id="@+id/reward"
+				    style="@style/HeaderGrey"
+				    android:layout_alignParentLeft="true"
+				    android:layout_below="@+id/loc_detail"
+				    android:paddingBottom="15dp"
+				    android:paddingTop="15dp"
+				    android:text="@string/reward" />
+
+				<ImageButton
+				    android:id="@+id/loc_button"
+                    style="?android:attr/borderlessButtonStyle"
+				    android:layout_width="48dp"
+				    android:layout_height="match_parent"
+				    android:layout_alignParentRight="true"
+				    android:layout_alignTop="@+id/loc_detail"
+				    android:layout_toRightOf="@+id/loc_detail"
+                    android:background="?android:attr/dividerVertical"
+				    android:src="@drawable/action_map"
+				    android:maxHeight="48dp"
+				    android:maxWidth="48dp"
+				    android:onClick="toMap"
+                    android:contentDescription="@string/item_detail_map" android:layout_alignParentEnd="true"/>
+    
+</RelativeLayout>
+</ScrollView>

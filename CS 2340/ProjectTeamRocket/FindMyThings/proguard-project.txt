@@ -1,0 +1,1 @@
+-keep class edu.gatech.oad.rocket.findmythings.control.SharedApplication

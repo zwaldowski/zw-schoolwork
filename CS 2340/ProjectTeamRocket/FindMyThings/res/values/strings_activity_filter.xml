@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    
+    <string name="filter_status">STATUS</string>
+    <string name="filter_category">CATEGORY</string>
+    <string name="filter_date">DATE</string>
+	<string name="no_selection">Any</string>
+
+    <string-array name="status_array">
+        <item>All</item>
+        <item>Open</item>
+        <item>Closed</item>
+    </string-array>
+    <string-array name="category_array">
+        <item>Any</item>
+        <item>Heirloom</item>
+        <item>Keepsake</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="date_array">
+        <item>All time</item>
+        <item>Yesterday</item>
+        <item>14 days</item>
+        <item>30 days</item>
+    </string-array>
+
+    
+</resources>

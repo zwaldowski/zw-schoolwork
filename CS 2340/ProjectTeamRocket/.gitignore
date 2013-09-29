@@ -1,0 +1,45 @@
+bin/
+gen/
+*.apk
+*.ap_
+*.class
+*.dex
+local.properties
+
+# Linux
+!.gitignore
+*~
+
+# Mac
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Windows crap
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Eclipse
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+.metadata
+
+# Local DB
+appengine-generated/
+
+# IntelliJ
+.idea/workspace.xml
+.idea/uiDesigner.xml
+.idea/dictionaries
+out
+
+proguard/

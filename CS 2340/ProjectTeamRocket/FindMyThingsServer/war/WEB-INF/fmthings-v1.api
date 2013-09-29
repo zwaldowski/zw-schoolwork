@@ -1,0 +1,716 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://rocket-findmythings.appspot.com/_ah/api",
+  "name" : "fmthings",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://rocket-findmythings.appspot.com/_ah/spi",
+    "deadline" : 10.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "fmthings.account.register" : {
+      "path" : "register",
+      "httpMethod" : "POST",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.createUser",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          },
+          "password" : {
+            "type" : "string",
+            "required" : true
+          },
+          "password_alt" : {
+            "type" : "string",
+            "required" : true
+          },
+          "phone" : {
+            "type" : "string",
+            "required" : false
+          },
+          "name" : {
+            "type" : "string",
+            "required" : false
+          },
+          "address" : {
+            "type" : "string",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.createAdmin" : {
+      "path" : "register/admin",
+      "httpMethod" : "POST",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.createAdmin",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          },
+          "password" : {
+            "type" : "string",
+            "required" : true
+          },
+          "password_alt" : {
+            "type" : "string",
+            "required" : true
+          },
+          "phone" : {
+            "type" : "string",
+            "required" : false
+          },
+          "name" : {
+            "type" : "string",
+            "required" : false
+          },
+          "address" : {
+            "type" : "string",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.login" : {
+      "path" : "account/login",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.getLoginToken",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          },
+          "password" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.logout" : {
+      "path" : "account/logout",
+      "httpMethod" : "DELETE",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.deleteLoginToken",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.get" : {
+      "path" : "account",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.getCurrentMember",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.forgot" : {
+      "path" : "forgot",
+      "httpMethod" : "POST",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.memberForgotPassword",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.account.update" : {
+      "path" : "account/update",
+      "httpMethod" : "PUT",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.updateMember",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.delete" : {
+      "path" : "items/delete",
+      "httpMethod" : "DELETE",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.removeItem",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.get" : {
+      "path" : "items/get",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.getItem",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.list" : {
+      "path" : "items",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listItems",
+      "request" : {
+        "parameters" : {
+          "query" : {
+            "type" : "string",
+            "required" : false
+          },
+          "type" : {
+            "type" : "string",
+            "required" : false
+          },
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.getByUser" : {
+      "path" : "items/forMember",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listItemsForMember",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          },
+          "type" : {
+            "type" : "string",
+            "required" : false
+          },
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.getMine" : {
+      "path" : "items/mine",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listMyItems",
+      "request" : {
+        "parameters" : {
+          "type" : {
+            "type" : "string",
+            "required" : false
+          },
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.insert" : {
+      "path" : "items/insert",
+      "httpMethod" : "POST",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.insertItem",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.items.update" : {
+      "path" : "items/update",
+      "httpMethod" : "PUT",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.updateItem",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.members.get" : {
+      "path" : "members/get",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.getMember",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.members.list" : {
+      "path" : "members",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.listMembers",
+      "request" : {
+        "parameters" : {
+          "email" : {
+            "type" : "string",
+            "required" : false
+          },
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.members.update" : {
+      "path" : "members/update",
+      "httpMethod" : "PUT",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.updateMember",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.test.unauthenticated" : {
+      "path" : "test",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.TestV1.getTest",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "fmthings.test.authenticated" : {
+      "path" : "test/auth",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ ],
+      "clientIds" : [ ],
+      "rosyMethod" : "edu.gatech.oad.rocket.findmythings.server.spi.TestV1.getTestAuthenticated",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "MessageBean" : {
+        "id" : "MessageBean",
+        "type" : "object",
+        "properties" : {
+          "status" : {
+            "type" : "integer"
+          },
+          "message" : {
+            "type" : "string"
+          },
+          "failureReason" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "token" : {
+            "type" : "string"
+          }
+        }
+      },
+      "AppMember" : {
+        "id" : "AppMember",
+        "type" : "object",
+        "properties" : {
+          "address" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "registered" : {
+            "type" : "boolean"
+          },
+          "locked" : {
+            "type" : "boolean"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "admin" : {
+            "type" : "boolean"
+          },
+          "editable" : {
+            "type" : "boolean"
+          },
+          "phone" : {
+            "$ref" : "PhoneNumber"
+          },
+          "roles" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "stringPermissions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "PhoneNumber" : {
+        "id" : "PhoneNumber",
+        "type" : "object",
+        "properties" : {
+          "number" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DBItem" : {
+        "id" : "DBItem",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "submittingUser" : {
+            "type" : "string"
+          },
+          "searchTokens" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "type" : {
+            "$ref" : "Type"
+          },
+          "category" : {
+            "$ref" : "Category"
+          },
+          "date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "reward" : {
+            "type" : "integer"
+          },
+          "open" : {
+            "type" : "boolean"
+          },
+          "searchableContent" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Type" : {
+        "id" : "Type",
+        "type" : "string",
+        "enum" : [ "LOST", "FOUND", "DONATION", "REQUEST" ]
+      },
+      "Category" : {
+        "id" : "Category",
+        "type" : "string",
+        "enum" : [ "HEIR", "KEEPSAKE", "MISC" ]
+      },
+      "CollectionResponse_DBItem" : {
+        "id" : "CollectionResponse_DBItem",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "DBItem"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CollectionResponse_AppMember" : {
+        "id" : "CollectionResponse_AppMember",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "AppMember"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.createUser" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.createAdmin" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.getLoginToken" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.deleteLoginToken" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.getCurrentMember" : {
+        "response" : {
+          "$ref" : "AppMember"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.memberForgotPassword" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.AccountV1.updateMember" : {
+        "request" : {
+          "$ref" : "AppMember"
+        },
+        "response" : {
+          "$ref" : "AppMember"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.removeItem" : {
+        "response" : {
+          "$ref" : "DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.getItem" : {
+        "response" : {
+          "$ref" : "DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listItems" : {
+        "response" : {
+          "$ref" : "CollectionResponse_DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listItemsForMember" : {
+        "response" : {
+          "$ref" : "CollectionResponse_DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.listMyItems" : {
+        "response" : {
+          "$ref" : "CollectionResponse_DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.insertItem" : {
+        "request" : {
+          "$ref" : "DBItem"
+        },
+        "response" : {
+          "$ref" : "DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.ItemV1.updateItem" : {
+        "request" : {
+          "$ref" : "DBItem"
+        },
+        "response" : {
+          "$ref" : "DBItem"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.getMember" : {
+        "response" : {
+          "$ref" : "AppMember"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.listMembers" : {
+        "response" : {
+          "$ref" : "CollectionResponse_AppMember"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.MemberV1.updateMember" : {
+        "request" : {
+          "$ref" : "AppMember"
+        },
+        "response" : {
+          "$ref" : "AppMember"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.TestV1.getTest" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      },
+      "edu.gatech.oad.rocket.findmythings.server.spi.TestV1.getTestAuthenticated" : {
+        "response" : {
+          "$ref" : "MessageBean"
+        }
+      }
+    }
+  }
+}
