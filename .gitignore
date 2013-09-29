@@ -1,5 +1,5 @@
 # Compiled destination folder
-bin/
+**/bin/
 
 # Compiled Java
 *.class
@@ -18,6 +18,10 @@ bin/
 
 # IntelliJ+AppCode
 .idea/
+.idea/workspace.xml
+.idea/uiDesigner.xml
+.idea/dictionaries
+out
 
 # Mac/Xcode
 .DS_Store
@@ -25,9 +29,49 @@ bin/
 xcuserdata
 *.moved-aside
 DerivedData
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Windows crap
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+!.gitignore
+*~
 
 # Manual overrides
-CS\ 1332/*/.classpath
-CS\ 1332/*/.project
-CS\ 1332/*/*.iml
-CS\ 1332/*/out
+**/.classpath
+**/.project
+**/*.iml
+**/out
+
+# Android compiled
+gen/
+*.apk
+*.ap_
+*.class
+*.dex
+local.properties
+proguard/
+
+# Eclipse
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+.metadata
+
+# Local DB
+appengine-generated/
+
+# Javadoc
+docs/
+doc/
